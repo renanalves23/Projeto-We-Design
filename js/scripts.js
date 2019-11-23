@@ -1,7 +1,18 @@
 
 // Menu Mobile
 
+const hamb_icon = document.getElementById('hamburguer-icon').onclick = () => {
+    document.getElementById('sliding-header-menu-outer').style.right = '0px';
+};
 
+const close_icon = document.getElementById('sliding-header-menu-close-button').onclick = () => {
+  document.getElementById('sliding-header-menu-outer').style.right = '-312px';
+};
+
+
+//id="sliding-header-menu-outer"
+//id="hamburguer-icon"
+// class="close-icon"
 
 
 // About us Tab
