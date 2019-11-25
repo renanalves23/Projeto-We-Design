@@ -51,6 +51,11 @@ var our_services = [
 
 // Data Footer
 
+var ano_atual = new Date;
+ano_atual = ano_atual.getFullYear();
+
+document.getElementById('current_year').innerHTML = ano_atual;
+
 
 
   
