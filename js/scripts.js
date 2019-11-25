@@ -32,19 +32,27 @@ var about_tags = document.getElementsByClassName('single-tab');
 
 
 
-for (var i = 0; i < about_tags.length; i++) {
+for (let i = 0; i < about_tags.length; i++) {
      
   about_tags[i].onclick = function () {
 
-      //outro loop para unselect do realce
-      for (var j = 0; j < about_tags.length; j++) {
-          about_tags[j].style['background-color'] = unselected_color;
-      }
+          //outro loop para unselect do realce
+          for (let j = 0; j < about_tags.length; j++) {
+              about_tags[j].style['background-color'] = unselected_color;
+              about_tags[j].style['font-weight'] = 'normal';
+        }
    
      this.style['background-color'] = selected_color;
      this.style['font-weight'] = 'bold';
 
-   
+
+     //passagem do texto
+
+       var selecionado = this.innerHTML;
+  //       console.log(selecionado)
+
+    document.getElementById("box-text").innerHTML = aboutUs[selecionado];
+
   };
   
 }
