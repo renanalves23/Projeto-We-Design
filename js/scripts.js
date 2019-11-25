@@ -49,6 +49,38 @@ var our_services = [
 ];
 
 
+// id service-previous // id service-next //service-title //service-text
+
+// SETA PREVIOUS
+var servico_atual = 0;
+document.getElementById('service-previous').onclick = function () {
+    //se estiver na posição zero, ir para o último
+  if (servico_atual == 0) {
+    var servico_anterior = our_services.length - 1;
+  }else {
+    var servico_anterior = servico_atual - 1;
+  }
+
+  document.getElementById('service-title').innerHTML = our_services[servico_anterior].title;
+  document.getElementById('service-text').innerHTML = our_services[servico_anterior].text;
+  servico_atual = servico_anterior;
+}
+
+// SETA NEXT
+document.getElementById('service-next').onclick = function () {
+  //se estiver na posição zero, ir para o último
+if (servico_atual == our_services.length - 1) {
+  var servico_seguinte = 0;
+}else {
+  var servico_seguinte = servico_atual + 1;
+}
+
+document.getElementById('service-title').innerHTML = our_services[servico_seguinte].title;
+document.getElementById('service-text').innerHTML = our_services[servico_seguinte].text;
+servico_atual = servico_seguinte;
+}
+
+
 // Data Footer
 
 
